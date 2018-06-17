@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Find a Friend</title>
+    <style>
+        * {
+            color: white;
+        }
+
+        .material-icons, span {
+            color: yellow;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title{
+            font-style:italic;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="card-panel blue col s12">
+            <div class="center">
+                <h1 class='title'>
+                    <i class="material-icons medium">account_circle</i> Friend Finder</h1>
+                <hr>
+                <p>Answer a few basic questions.</p>
+                <p>Then find the friend with the greatest compatibility!</p>
+                <br>
+                <div>
+                    <a href="/survey">
+                        <button class="waves-effect waves-light btn blue lighten-3">
+                            <i class="material-icons left">assignment</i> Go to Survey</button>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+        <footer class="footer">
+            <div class="col s4">
+                <p>
+                    <a href="/api/friends">API Friends List</a> 
+                    <span>|</span>
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+
+
+    </div>
 
 
 
@@ -18,4 +74,5 @@
 
     <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
