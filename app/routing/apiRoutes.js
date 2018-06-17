@@ -18,7 +18,10 @@ module.exports = (app) => {
             }
             scoreArr.push(count);
         }
-        const findMatch = scoreArr.sort(function(a, b){return a-b}); 
+        const findMatch = scoreArr;
+        scoreArr.sort(function(a, b){return a-b}); 
+        console.log(scoreArr);
+        console.log(findMatch);
         let yourMatch = 0;
         for (let i in scoreArr){
             if(scoreArr[i] === findMatch[0]){
@@ -28,19 +31,8 @@ module.exports = (app) => {
         console.log(yourMatch);
 
 
-
-
-
-
-
-
-
         res.json(true);
         friendData.push(req.body);
-
-
-
-
 
     });
 }
