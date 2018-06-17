@@ -222,62 +222,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script type="text/javascript">
-        $("#submit").on("click", (event) => {
-            event.preventDefault();
+        $(document).ready(function () {
+            $("#submit").on("click", (event) => {
+                event.preventDefault();
 
-            // Form validation
-            function validateForm() {
-                let isValid = true;
-                $(".form-control").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
+                // Form validation
+                function validateForm() {
+                    let isValid = true;
+                    $(".form-control").each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+
+                    $(".chosen-select").each(function () {
+
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }
+
+                if (validateForm() === true) {
+                    let totalScore = new Array();
+                    for (let i = 1; i < 11; i++){
+                        let score = $('#q' + i).val();
+                        totalScore.push(score);
                     }
-                });
+                    const userData = {
+                        name: $("#name").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: totalScore
+                    };
+                    $.post("/api/friends", userData, (data) => {
+                        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#matchName").text(data.name);
+                        $("#matchImg").attr("src", data.photo);
+                        // Materialize Modal.
+                        $('.modal').modal();
+                    });
+                } else {
+                    alert("Please fill out all fields before submitting!");
+                }
+            });
 
-                $(".chosen-select").each(function () {
-
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
-                return isValid;
-            }
-
-
-
-            if (validateForm() === true) {
-                const userData = {
-                    name: $("#name").val().trim(),
-                    photo: $("#photo").val().trim(),
-                    scores: [
-                        $("#q1").val(),
-                        $("#q2").val(),
-                        $("#q3").val(),
-                        $("#q4").val(),
-                        $("#q5").val(),
-                        $("#q6").val(),
-                        $("#q7").val(),
-                        $("#q8").val(),
-                        $("#q9").val(),
-                        $("#q10").val()
-                    ]
-                };
-                $.post("/api/friends", userData, (data) => {
-
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#matchName").text(data.name);
-                    $("#matchImg").attr("src", data.photo);
-
-                    // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
-
-                });
-            } else {
-                alert("Please fill out all fields before submitting!");
-            }
-        });
-
-
+        });//Document End
     </script>
 
 </body>
