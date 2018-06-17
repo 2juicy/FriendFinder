@@ -7,5 +7,9 @@ module.exports = (app) => {
 
     app.post('/api/friends', (req, res) => {
         console.log(req.body);
+        let scoreTotal = 0;
+        for (i in req.body.friends.scores){
+            scoreTotal += req.body.friends.scores[i];
+        }
     });
 }
