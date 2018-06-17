@@ -192,19 +192,8 @@
 
             <!-- Submit Button -->
             <div class="center">
-                <button type="submit" class="waves-effect waves-light btn purple darken-1 modal-trigger" id="submit">
+                <button type="submit" class="waves-effect waves-light btn purple darken-1 modal-trigger" href="#modal1" id="submit">
                     <i class="material-icons left">assignment</i> Submit</button>
-            </div>
-            <!-- Materialize Modal -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h2>Best Match</h2>
-                    <h3 id="matchName"></h3>
-                    <img id='matchImg' src="#" alt="">
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                </div>
             </div>
         </div>
 
@@ -218,6 +207,17 @@
             </div>
         </footer>
 
+        <!-- Materialize Modal -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h2>Best Match</h2>
+                <h3 id="matchName"></h3>
+                <img id='matchImg' src="" alt="No Image">
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -246,7 +246,7 @@
 
                 if (validateForm() === true) {
                     let totalScore = new Array();
-                    for (let i = 1; i < 11; i++){
+                    for (let i = 1; i < 11; i++) {
                         let score = $('#q' + i).val();
                         totalScore.push(score);
                     }
@@ -259,14 +259,12 @@
                         // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                         $("#matchName").text(data.name);
                         $("#matchImg").attr("src", data.photo);
-                        // Materialize Modal.
-                        $('.modal').modal();
                     });
+                    $('.modal').modal();
                 } else {
                     alert("Please fill out all fields before submitting!");
                 }
             });
-
         });//Document End
     </script>
 

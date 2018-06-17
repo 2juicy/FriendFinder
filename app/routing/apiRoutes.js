@@ -6,32 +6,28 @@ module.exports = (app) => {
     });
 
     app.post('/api/friends', (req, res) => {
-        console.log(req.body);
-        
+        // console.log(req.body);        
         const newScore = req.body.scores;
-
-        let scoreArr = [];
+        let sortedArr = [];
+        let findMatch = [];
         for (let i in friendData){
             let count = 0
             for (let x in newScore){
                 count += Math.abs(newScore[x] - friendData[i].scores[x]);
             }
-            scoreArr.push(count);
+            sortedArr.push(count);
+            findMatch.push(count);
         }
-        const findMatch = scoreArr;
-        scoreArr.sort(function(a, b){return a-b}); 
-        console.log(scoreArr);
-        console.log(findMatch);
+        sortedArr.sort(function(a, b){return a-b}); 
+        // console.log(sortedArr);
+        // console.log(findMatch);
         let yourMatch = 0;
-        for (let i in scoreArr){
-            if(scoreArr[i] === findMatch[0]){
+        for (let i in sortedArr){
+            if(sortedArr[i] === findMatch[0]){
                 yourMatch = i;
             }
         }
-        console.log(yourMatch);
-
-
-        res.json(true);
+        res.json(friendData[yourMatch]);
         friendData.push(req.body);
 
     });
