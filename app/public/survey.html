@@ -27,6 +27,9 @@
             color: white;
             font-style: oblique;
         }
+        .container{
+            border-radius:15px;
+        }
         #matchName {
             color: black;
         }
@@ -39,9 +42,7 @@
 
 <body>
     <div class="container center-align blue lighten-2">
-        <h1>
-            <strong>Survey Questions</strong>
-        </h1>
+        <h1><strong>Survey Questions</strong></h1>
         <hr>
         <div class="container">
 
@@ -266,6 +267,8 @@
                         $("#matchImg").attr("src", data.photo);
                     });
                     $('.modal').modal();
+                    $("#name, #photo").val('');
+                    $("#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10").empty();
                 } else {
                     alert("Please fill out all fields before submitting!");
                 }
