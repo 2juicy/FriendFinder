@@ -1,9 +1,9 @@
 const friends = 
 [{
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Lady",
+  "photo":"http://www.guoguiyan.com/data/out/112/70078718-lady-wallpapers.jpg",
   "scores":[
-      5,
+      1,
       1,
       4,
       4,
@@ -16,7 +16,7 @@ const friends =
     ]
 },
 {
-  "name":"Ahmed",
+  "name":"Taylor",
   "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
   "scores":[
       5,
