@@ -1,7 +1,7 @@
 # FriendFinder
 
 ### Deployed on Heroku!
-https://github.com/2juicy/FriendFinder
+https://datingapphw.herokuapp.com/
 
 ### NPM Packages
 * [Express](https://www.npmjs.com/package/express)
