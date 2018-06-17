@@ -3,5 +3,6 @@ app.get('/api/friends', (req, res) => {
 });
 
 app.post('/api/friends', (req, res) => {
-    res.send('You are in the survey page');
+    res.send('Posting a friend page');
+    //Got to use path.join() possible here
 });
