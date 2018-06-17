@@ -32,8 +32,8 @@ const friends =
     ]
 },
 {
-  "name":"Not A Real Person LOL",
-  "photo":"https://f4.bcbits.com/img/a2369082567_10.jpg",
+  "name":"Lola Rhodes",
+  "photo":"https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/LolaRhodes.jpg/220px-LolaRhodes.jpg",
   "scores":[
       4,
       1,
