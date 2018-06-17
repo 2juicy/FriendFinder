@@ -7,12 +7,28 @@ module.exports = (app) => {
 
     app.post('/api/friends', (req, res) => {
         console.log(req.body);
-        // let scoreTotal = 0;
-        // let scoreArr = [];
-        // for (i in req.body.friends.scores){
-        //     scoreTotal += req.body.friends.scores[i].parseInt();
-        // }
+        
+        const newScore = req.body.scores;
+        let scoreTotal = 0;
+        let scoreArr = [];
+        for (let i in friendData){
+            scoreTotal += req.body.friends.scores[i].parseInt();
+        }
         res.json(true);
         friendData.push(req.body);
+        console.log(friendData);
+
+
+
+
+
+
+
+
+
+
+
+
+
     });
 }
