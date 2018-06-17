@@ -18,9 +18,9 @@ module.exports = (app) => {
             }
             scoreArr.push(count);
         }
+        scoreArr.sort(function(a, b){return a-b});
         console.log(scoreArr);
 
-        
 
 
 
