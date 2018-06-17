@@ -9,22 +9,29 @@ module.exports = (app) => {
         console.log(req.body);
         
         const newScore = req.body.scores;
-        let scoreTotal = 0;
+
         let scoreArr = [];
         for (let i in friendData){
-            scoreTotal += req.body.friends.scores[i].parseInt();
+            let count = 0
+            for (let x in newScore){
+                count += math.abs(newScore[x] - friendData[i].scores[x]);
+            }
+            scoreArr.push(count);
         }
+
+
+
+
+
+
+
+
+
+
+
+
         res.json(true);
         friendData.push(req.body);
-        console.log(friendData);
-
-
-
-
-
-
-
-
 
 
 
