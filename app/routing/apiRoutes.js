@@ -23,12 +23,12 @@ module.exports = (app) => {
         // console.log(findMatch);
         let yourMatch = 0;
         for (let i in sortedArr){
-            if(sortedArr[i] === findMatch[0]){
+            if(findMatch[i] == sortedArr[0]){
                 yourMatch = i;
             }
         }
+        console.log(sortedArr, findMatch, yourMatch);
         res.json(friendData[yourMatch]);
         friendData.push(req.body);
-
     });
 }
