@@ -14,11 +14,11 @@ module.exports = (app) => {
         for (let i in friendData){
             let count = 0
             for (let x in newScore){
-                count += math.abs(newScore[x] - friendData[i].scores[x]);
+                count += Math.abs(newScore[x] - friendData[i].scores[x]);
             }
             scoreArr.push(count);
         }
-
+        console.log(scoreArr);
 
 
 
