@@ -17,7 +17,7 @@ const friends =
 },
 {
   "name":"Taylor",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "photo":"https://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2017/04/041217-taylor-swift-lead_2_0.jpg?itok=rmDhKHDo",
   "scores":[
       5,
       1,
@@ -32,8 +32,8 @@ const friends =
     ]
 },
 {
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Not A Real Person LOL",
+  "photo":"https://f4.bcbits.com/img/a2369082567_10.jpg",
   "scores":[
       4,
       1,
