@@ -19,16 +19,16 @@ const friends =
   "name":"Taylor",
   "photo":"https://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2017/04/041217-taylor-swift-lead_2_0.jpg?itok=rmDhKHDo",
   "scores":[
-      5,
-      1,
+      2,
+      3,
       4,
-      4,
+      2,
       3,
       1,
       2,
-      5,
-      4,
-      1
+      3,
+      3,
+      3
     ]
 },
 {
