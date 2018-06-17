@@ -16,7 +16,7 @@ const friends =
     ]
 },
 {
-  "name":"Taylor",
+  "name":"Swifty",
   "photo":"https://cdn-img.instyle.com/sites/default/files/styles/684xflex/public/images/2017/04/041217-taylor-swift-lead_2_0.jpg?itok=rmDhKHDo",
   "scores":[
       2,
