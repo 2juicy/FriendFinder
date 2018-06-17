@@ -1,7 +1,7 @@
 const friends = 
 [{
   "name":"Lady",
-  "photo":"http://www.guoguiyan.com/data/out/112/70078718-lady-wallpapers.jpg",
+  "photo":"https://i.imgur.com/NmRWrrL.jpg",
   "scores":[
       1,
       1,

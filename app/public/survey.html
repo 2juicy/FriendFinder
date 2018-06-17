@@ -27,6 +27,9 @@
             color: white;
             font-style: oblique;
         }
+        #matchname {
+            color: black;
+        }
 
         h4 {
             font-size: 20px;
@@ -257,6 +260,7 @@
                     };
                     $.post("/api/friends", userData, (data) => {
                         // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        console.log(data);
                         $("#matchName").text(data.name);
                         $("#matchImg").attr("src", data.photo);
                     });
