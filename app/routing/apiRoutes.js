@@ -1,11 +1,11 @@
+const friends = require('../data/friend.js');
 
 module.exports = (app) => {
     app.get('/api/friends', (req, res) => {
-        res.send('Hello Homepage');
+        res.json(friends);
     });
 
     app.post('/api/friends', (req, res) => {
-        res.send('Posting a friend page');
-        //Got to use path.join() possible here
+        console.log(req.body);
     });
 }
