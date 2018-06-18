@@ -62,5 +62,25 @@ const friends =
       1,
       1
     ]
+},
+{
+  "name":"Naryu",
+  "photo":"http://s1.dmcdn.net/gvtqL/x240-nX3.jpg",
+  "scores":[
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
 }];
+
+
+
+
 module.exports = friends;
