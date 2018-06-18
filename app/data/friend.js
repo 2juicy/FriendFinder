@@ -46,6 +46,25 @@ const friends =
       4,
       1
     ]
+},
+{
+  "name":"Juicy",
+  "photo":"https://www.awesomegifs.com/wp-content/uploads/Cat-gets-eaten-for-shark-week.gif",
+  "scores":[
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
 }];
+
+
+
 
 module.exports = friends;
