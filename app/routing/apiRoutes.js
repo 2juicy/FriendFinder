@@ -5,8 +5,7 @@ module.exports = (app) => {
         res.json(friendData);
     });
 
-    app.post('/api/friends', (req, res) => {
-        // console.log(req.body);        
+    app.post('/api/friends', (req, res) => {    
         const newScore = req.body.scores;
         let sortedArr = [];
         let findMatch = [];
@@ -19,8 +18,6 @@ module.exports = (app) => {
             findMatch.push(count);
         }
         sortedArr.sort(function(a, b){return a-b}); 
-        // console.log(sortedArr);
-        // console.log(findMatch);
         let yourMatch = 0;
         for (let i in sortedArr){
             if(findMatch[i] == sortedArr[0]){
