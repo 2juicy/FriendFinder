@@ -18,13 +18,13 @@ module.exports = (app) => {
             findMatch.push(count);
         }
         sortedArr.sort(function(a, b){return a-b}); 
-        let yourMatch = 0;
+        let yourMatch = '';
         for (let i in sortedArr){
             if(findMatch[i] == sortedArr[0]){
-                yourMatch = i;
+                yourMatch = friendData[i];
             }
         }
-        res.json(friendData[yourMatch]);
+        res.json(yourMatch);
         friendData.push(req.body);
     });
 }
