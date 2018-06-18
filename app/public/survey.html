@@ -260,8 +260,7 @@
                         $("#modalDiv").empty();
                         for (let i in data) {
                             $("#modalDiv").append(`<h3 id="matchName">${data[i].name}</h3>`);
-                            let validate = data[i].photo.slice(0, 4);
-                            if (validate === 'http') {
+                            if (data[i].photo.startsWith('http') === true) {
                                 $("#modalDiv").append(`<img id='matchImg' width='400px' src="${data[i].photo}" alt="No Image">`);
                             } else {
                                 $("#modalDiv").append(`<img id='matchImg' width='400px' src="https://www.privateinternetaccess.com/assets/browseanonymously-e8eb1cfefb48344d9e79f3695ae42eaa81de87e8b87a36c9bcd6a49f2ee964a7.jpg" alt="No Image">`);
