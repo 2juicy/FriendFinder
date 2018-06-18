@@ -18,10 +18,10 @@ module.exports = (app) => {
             findMatch.push(count);
         }
         sortedArr.sort(function(a, b){return a-b}); 
-        let yourMatch = '';
+        let yourMatch = new Array();
         for (let i in sortedArr){
             if(findMatch[i] == sortedArr[0]){
-                yourMatch = friendData[i];
+                yourMatch.push(friendData[i]);
             }
         }
         res.json(yourMatch);

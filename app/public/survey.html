@@ -27,9 +27,11 @@
             color: white;
             font-style: oblique;
         }
-        .container{
-            border-radius:15px;
+
+        .container {
+            border-radius: 15px;
         }
+
         #matchName {
             color: black;
         }
@@ -42,7 +44,9 @@
 
 <body>
     <div class="container center-align blue lighten-2">
-        <h1><strong>Survey Questions</strong></h1>
+        <h1>
+            <strong>Survey Questions</strong>
+        </h1>
         <hr>
         <div class="container">
 
@@ -214,10 +218,9 @@
         <!-- Materialize Modal -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h2>Best Match</h2>
+                <h2>Best Match(s)</h2>
                 <hr>
-                <h3 id="matchName"></h3>
-                <img id='matchImg' width='400px' src="" alt="No Image">
+                <div id="modalDiv"></div>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -262,9 +265,11 @@
                     };
                     $.post("/api/friends", userData, (data) => {
                         // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                        console.log(data);
-                        $("#matchName").text(data.name);
-                        $("#matchImg").attr("src", data.photo);
+                        $("#modalDiv").empty();
+                        for (let i in data) {
+                            $("#modalDiv").append(`<h3 id="matchName">${data[i].name}</h3>`);
+                            $("#modalDiv").append(`<img id='matchImg' width='400px' src="${data[i].photo}" alt="No Image">`);
+                        }
                     });
                     $('.modal').modal();
                     $("#name, #photo, #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10").val('');
