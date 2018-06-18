@@ -35,6 +35,7 @@
         h3 {
             color: white;
             font-style: oblique;
+            text-shadow: 2px 2px black;
         }
 
         .container {
@@ -45,10 +46,13 @@
             color: black;
         }
 
-        h4 {
+        h4, #modalDiv {
             font-size: 20px;
         }
 
+        #submit{
+            margin-bottom: 1em;
+        }
         @media screen and (max-width: 600px) {
             select {
                 width: 100%;
@@ -227,7 +231,7 @@
         <!-- Materialize Modal -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h2>Best Match(s)</h2>
+                <h2 id='best'>Best Match(s)</h2>
                 <hr>
                 <div id="modalDiv"></div>
             </div>
@@ -271,6 +275,7 @@
                         scores: totalScore
                     };
                     $.post("/api/friends", userData, (data) => {
+                        $('#best').show();
                         $("#modalDiv").empty();
                         for (let i in data) {
                             $("#modalDiv").append(`<h3 id="matchName">${data[i].name}</h3>`);
@@ -280,11 +285,13 @@
                                 $("#modalDiv").append(`<img id='matchImg' width='400px' src="https://www.privateinternetaccess.com/assets/browseanonymously-e8eb1cfefb48344d9e79f3695ae42eaa81de87e8b87a36c9bcd6a49f2ee964a7.jpg" alt="No Image">`);
                             }
                         }
-                    });
+                    });                    
                     $('.modal').modal();
                     $("#name, #photo, #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10").val('');
                 } else {
-                    alert("Please fill out all fields before submitting!");
+                    $('#best').hide();
+                    $('.modal').modal();
+                    $('#modalDiv').text("Please fill out all fields before submitting!");
                 }
             });
         });//Document End

@@ -13,8 +13,14 @@
             color: white;
         }
 
-        .material-icons, span {
+        .material-icons,
+        span {
             color: yellow;
+            text-shadow: 2px 2px black;
+        }
+
+        p {
+            font-size: 20px;
         }
 
         hr {
@@ -26,8 +32,13 @@
             padding: 0;
         }
 
-        h1{
-            font-style:italic;
+        h1 {
+            font-style: oblique;
+            text-shadow: 2px 2px black;
+        }
+
+        .card-panel {
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -37,7 +48,8 @@
         <div class="card-panel blue col s12">
             <div class="center">
                 <h1>
-                    <i class="material-icons medium">account_circle</i> Friend Finder</h1>
+                    <strong><i class="material-icons medium">account_circle</i> Friend Finder</Strong>
+                </h1>
                 <hr>
                 <p>Answer a few basic questions.</p>
                 <p>Then find the friend with the greatest compatibility!</p>
@@ -56,7 +68,7 @@
         <footer class="footer center">
             <div class="col s4">
                 <p>
-                    <a href="/api/friends" target='_blank'>API Friends List</a> 
+                    <a href="/api/friends" target='_blank'>API Friends List</a>
                     <span>|</span>
                     <a href="https://github.com/2juicy/FriendFinder" target="_blank">GitHub Repo</a>
                 </p>
