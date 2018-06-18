@@ -24,7 +24,6 @@ module.exports = (app) => {
                 yourMatch = i;
             }
         }
-        console.log(sortedArr, findMatch, yourMatch);
         res.json(friendData[yourMatch]);
         friendData.push(req.body);
     });
