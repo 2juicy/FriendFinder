@@ -1,5 +1,4 @@
-const friends = 
-[{
+const friends = [{
   "name":"Lady",
   "photo":"https://i.imgur.com/NmRWrrL.jpg",
   "scores":[
@@ -79,8 +78,4 @@ const friends =
       5
     ]
 }];
-
-
-
-
 module.exports = friends;
