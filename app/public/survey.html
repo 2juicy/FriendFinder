@@ -261,7 +261,6 @@
                         for (let i in data) {
                             $("#modalDiv").append(`<h3 id="matchName">${data[i].name}</h3>`);
                             let validate = data[i].photo.slice(0, 4);
-                            console.log(validate);
                             if (validate === 'http') {
                                 $("#modalDiv").append(`<img id='matchImg' width='400px' src="${data[i].photo}" alt="No Image">`);
                             } else {
